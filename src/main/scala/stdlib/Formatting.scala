@@ -46,11 +46,11 @@ object Formatting extends FlatSpec with Matchers with org.scalaexercises.definit
     "%c".format(f) should be(res3)
   }
 
-  /** Formatting can also include numbers:
+  /** "format" is also an operator, and formatting can also include numbers:
    */
   def includingNumbersFormatting(res0: String) {
     val j = 190
-    "%d bottles of beer on the wall" format j - 100 should be(res0)
+    "%d bottles of beer on the wall" format j - 100 should be(res0) // no dot before format
   }
 
   /** Formatting can be used for any number of items, like a string and a number:
